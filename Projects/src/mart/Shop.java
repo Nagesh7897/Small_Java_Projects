@@ -37,19 +37,21 @@ public class Shop {
             res=scanner.next();
 			if (res.equals("y") || res.equals("Y") )
 		    {
+				x=0;
 		       x= Controller.items();
+				finalbill =finalbill+x;
+			System.out.println("Final bill = " + finalbill );
 		    }
 		    else  if(res.equals("N") || res.equals("n"))
 		    {
 		    	System.out.println("Thank you!!!");
+		    	System.out.println("Final bill = " + finalbill );
 		    	i=10;                           //break
 		    }
 		    else {
 		    	System.out.println("Invalid Input");
 		    }
 
-		finalbill =finalbill+x;
-	System.out.println("Final bill = " + finalbill );
 	if (finalbill<budget)
 	{
 		System.out.println(" ");
